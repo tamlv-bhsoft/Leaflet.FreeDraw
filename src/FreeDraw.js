@@ -269,6 +269,8 @@ export default class FreeDraw extends FeatureGroup {
                 // Stop listening to the events.
                 map.off('mouseup', mouseUp);
                 map.off('mousemove', mouseMove);
+                map.off('mousedown touchstart', mouseDown);
+                
                 'body' in document && document.body.removeEventListener('mouseleave', mouseUp);
 
                 // Clear the SVG canvas.
